@@ -1,0 +1,42 @@
+:root {
+    --heart: #f43965;
+    --ease: linear(
+            0, 0.045 1.4%, 0.185 3.1%, 1.16 10.6%, 1.307, 1.37 14.7%, 1.372, 1.367 16%,
+            1.33 17.5%, 0.958 25.3%, 0.891, 0.863 29.8% 31.2%, 0.877 32.7%, 1.015 40.4%,
+            1.04, 1.051 44.8%, 1.046 47.9%, 0.995 55.6%, 0.981 59.8%, 0.983 63.1%,
+            1.007 74.7%, 0.998 89.2%, 1
+    );
+}
+
+svg use {
+    fill: transparent;
+    stroke: rgba(255,255,255,0.7);
+    stroke-width: 1.2;
+    transition: all 0.33s ease;
+}
+
+svg use:last-child {
+    fill: var(--heart);
+    stroke: var(--heart);
+    opacity: 0;
+    transform: scale(.33);
+    transform-origin: center;
+}
+
+.active svg use {
+    stroke: transparent;
+}
+
+.active svg use:last-child {
+    opacity: 1;
+    transform: none;
+    transition: all 1.2s var(--ease);
+}
+
+svg {
+    overflow: visible!important;
+}
+
+.hide {
+    display: none;
+}
