@@ -89,8 +89,8 @@ export default function Sidebar({
                     "
                 >
                     {theme === "dark"
-                        ? "🌙 Тёмная"
-                        : "☀️ Светлая"}
+                        ? "Тёмная"
+                        : "Светлая"}
                 </button>
             </div>
 
